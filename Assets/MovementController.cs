@@ -18,21 +18,24 @@ public class MovementController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             rigidbody.AddForce(new Vector3(0, 0, 1),ForceMode.Impulse);
+            //rigidbody.AddTorque(new Vector3(1, 0, 0),ForceMode.Impulse);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
+            //rigidbody.AddTorque(new Vector3(-1, 0, 0), ForceMode.Impulse);
             rigidbody.AddForce(new Vector3(0, 0, -1), ForceMode.Impulse);
+
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            rigidbody.AddTorque(new Vector3(0, 0, 0), ForceMode.Impulse);
+            rigidbody.AddTorque(new Vector3(0, 0.5f, 0), ForceMode.Impulse);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rigidbody.AddTorque(new Vector3(0, 0, 0), ForceMode.Impulse);
+            rigidbody.AddTorque(new Vector3(0, -0.5f, 0), ForceMode.Impulse);
         }
     }
 }
